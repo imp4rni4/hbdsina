@@ -123,6 +123,7 @@ function setupEnvelopeLogic() {
 
     //!  letter
     letter.addEventListener("click", (e) => {
+      e.stopPropagation();
       document.getElementById("env-hint").style.animation = "none";
       document.getElementById("env-hint").style.opacity = "0";
       document.getElementById("letters").style.zIndex = "300";
@@ -136,7 +137,8 @@ function setupEnvelopeLogic() {
     });
   });
 
-  document.querySelector("#openEnvelope").addEventListener("click", () => {
+  document.querySelector("#openEnvelope").addEventListener("click", (e) => {
+    e.stopPropagation();
     document.querySelector(".envelope").classList.add("active");
 
     document.getElementById("env-hint").style.animation =
