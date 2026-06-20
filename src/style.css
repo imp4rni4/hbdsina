@@ -17,7 +17,7 @@
   --letter-button-text: darkred;
   --heart-bg: darkred;
   --heart-text: white;
-  color-scheme: light only;
+  color-scheme: light;
 }
 /*! ========== MEOW ANIMATIONS ========== */
 @keyframes eyeFloat {
