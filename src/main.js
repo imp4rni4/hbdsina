@@ -137,14 +137,21 @@ function setupEnvelopeLogic() {
     });
   });
 
-  document.querySelector("#openEnvelope").addEventListener("click", (e) => {
+  function openTheEnvelope(e) {
     e.stopPropagation();
     document.querySelector(".envelope").classList.add("active");
 
     document.getElementById("env-hint").style.animation =
       "hintPulse 1.5s infinite";
     document.getElementById("env-hint").style.opacity = "1";
-  });
+  }
+
+  document
+    .querySelector("#openEnvelope")
+    .addEventListener("click", openTheEnvelope);
+  document
+    .querySelector("#mainEnvelope")
+    .addEventListener("click", openTheEnvelope);
 }
 
 document.querySelector(".scene").addEventListener("click", openBox);
